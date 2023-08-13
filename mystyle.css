@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(to right, #02028a, blue);
+}
+#search-name {
+  text-align: center;
+  margin: 100px auto 50px;
+  font-weight: 600;
+  color: aliceblue;
+}
+
+form {
+  width: 40%;
+  max-width: 400;
+  margin: auto;
+  height: 80px;
+  background: #202778;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+}
+
+form input {
+  background: transparent;
+  height: 100%;
+  color: #ffff;
+  font-size: 18px;
+  padding: 0px 30px;
+  border: 0;
+  outline: 0;
+  flex: 1;
+}
+form input:hover {
+  background-color: #792020cd;
+  border-radius: 8px;
+}
+form button {
+  background: red;
+  height: 100%;
+  border: 0;
+
+  /* not know about outline */
+  outline: 0;
+  color: white;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  cursor: pointer;
+  padding: 0 40px;
+}
+
+form button:hover {
+  transform: scale(1.08);
+  transition: transform;
+}
+::placeholder {
+  color: white;
+  font-size: 18px;
+}
+
+#show-more-btn {
+  background: red;
+  border: 0;
+  outline: 0;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin: 10px auto 100px;
+  cursor: pointer;
+  display: none;
+}
+#show-more-btn:hover {
+  background: rgba(255, 0, 0, 0.511);
+}
+
+#search-result {
+  width: 90%;
+  margin: 100px auto 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+}
+
+#search-result img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+/* for mobile view */
+@media all and (max-width: 600px) and (min-width: 0px) {
+  form {
+    width: 60%;
+    /* max-width: 300; */
+    /* margin: 2px; */
+    height: 40px;
+    /* background: #202778; */
+    display: flex;
+    align-items: center;
+    border-radius: 18px;
+  }
+  form input {
+    background: #202778;
+    height: 100%;
+    color: #ffff;
+    font-size: 12px;
+    padding: 0px 15px;
+    border-radius: 18px;
+    border: 0;
+    outline: 0;
+    flex: 1;
+  }
+  form input:hover {
+    background-color: #792020cd;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+  }
+  form button {
+    background: red;
+    height: 100%;
+    border: 0;
+
+    /* not know about outline */
+    outline: 0;
+    color: white;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    /* border-radius: 18px; */
+    margin-left: 4px;
+    cursor: pointer;
+    padding: 0 15px;
+  }
+  form button:hover {
+    background: rgba(255, 0, 0, 0.619);
+    cursor: pointer;
+  }
+  ::placeholder {
+    color: white;
+    font-size: 9px;
+  }
+
+  #search-result {
+    width: 95%;
+    margin: 50px auto 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+}
